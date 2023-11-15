@@ -7,10 +7,8 @@ document.addEventListener('mouseup', (event) => {
   element = document.activeElement;
   if (element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement || element.isContentEditable) {
     let {selectionStart, selectionEnd} = element;
-    console.log(selectionStart, selectionEnd);
 
  if (selectionStart === selectionEnd) return 
-
   prefix = element.value.substring(0, selectionStart);
   infix = element.value.substring(selectionStart, selectionEnd);
   postfix = element.value.substring(selectionEnd);
