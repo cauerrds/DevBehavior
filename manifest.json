@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Dev Behavior",
+  "version": "1.0.0",
+  "description": "Add brackets,= parentheses, quotes and more in text, ",
+  "permissions": ["activeTab"],
+  "icons": {
+    "128": "brackets.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
